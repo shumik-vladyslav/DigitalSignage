@@ -6,19 +6,22 @@ import { MessageService} from '../services/message-service';
 import { MessageTools } from './message-tools';
 import { MessageList } from './message-list';
 import {Message} from "./message-model";
+import { Navigation } from "../navigation/navigation";
 
 @Component({
     selector: 'div',
     template: `<div class ="panel panel-default">
+                <navigation></navigation>
                <div class="panel-heading">
                <message-tools (added)="onMessageAdded($event)" (deleted)="onMessageDeleted()" (saved)="saveMessages()"></message-tools>
                </div>
                <div class="panel-body">
+               fdgdf
                <message-list [messages]="messages"></message-list>
                </div>
                </div>`,
     styleUrls: ['app/messages/messages-main.css'],
-    directives: [MessageTools, MessageList, ROUTER_DIRECTIVES],
+    directives: [MessageTools, MessageList, Navigation, ROUTER_DIRECTIVES],
     providers: [MessageService]
 })
 export class MessagesMain implements OnInit {

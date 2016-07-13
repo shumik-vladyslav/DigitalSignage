@@ -80,6 +80,7 @@ const port:number = process.env.PORT || 8888;
 app.use('/api/content', require('./server/content/manager'));
 app.use('/api/assets', require('./server/assets/manager'));
 app.use('/api/messages', require('./server/message/manager'));
+app.use('/api/navigation', require('./server/navigation/manager'));
 app.listen(port,function(){
     console.log('http://127.0.0.1:' + port);
     console.log('http://127.0.0.1:' + port + '/api');
