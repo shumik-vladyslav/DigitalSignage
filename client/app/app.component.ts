@@ -8,7 +8,6 @@ import { AssetsMain } from './assets/assets-main';
 import {TableComponent} from "./table/MyTable";
 import {AgentsManager} from "./agents/AgentsManager";
 
-
 @Component({
     selector: 'my-app',
     template: `

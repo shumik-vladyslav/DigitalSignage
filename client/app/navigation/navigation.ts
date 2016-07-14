@@ -4,6 +4,7 @@
 
 import {Component, Input} from '@angular/core';
 import {MdButton} from '@angular2-material/button'
+import { MDL } from '../directives/mdl';
 
 interface INav {
     label: string,
@@ -17,6 +18,14 @@ interface INav {
     template:  `<div>NAVIGATION</div>
 <md-button>Flat button</md-button>
 <button md-button="" class="md-button">Button</button>
+<button class="mdl-button mdl-js-button"> Flat button </button>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Raised button with ripple
+</button>
+<button class="mdl-button mdl-js-button mdl-button--fab">
+  <i class="material-icons">add</i>
+</button>
+<button class="mdl-button mdl-js-button" disabled>Disabled</button>
  <md-menu-bar>
         <md-menu>
           <md-button type="button" class="md-icon-button" ng-click="$mdOpenMenu()" aria-label="Share">
@@ -54,7 +63,7 @@ interface INav {
 </ul>
                 `,
     styles: [],
-    directives: [MdButton]
+    directives: [MDL]
 })
 
 export class Navigation {
