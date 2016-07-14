@@ -2,10 +2,8 @@
 var express = require('express');
 var fs = require('fs');
 var router = express.Router();
-var url = '/nav-item.json';
-console.log(__dirname + url);
 router.get('/nav', function (req, res) {
-    fs.readFile(__dirname + url, 'utf8', function (err, data) {
+    fs.readFile(__dirname + '/nav-item.json', 'utf8', function (err, data) {
         if (err)
             throw err;
         res.json(JSON.parse(data));

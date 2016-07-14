@@ -16,7 +16,6 @@ import { Navigation } from "../navigation/navigation";
                <message-tools (added)="onMessageAdded($event)" (deleted)="onMessageDeleted()" (saved)="saveMessages()"></message-tools>
                </div>
                <div class="panel-body">
-               fdgdf
                <message-list [messages]="messages"></message-list>
                </div>
                </div>`,

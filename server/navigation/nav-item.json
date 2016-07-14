@@ -1,12 +1,10 @@
-/**
- * Created by shumik on 13.07.2016.
- */
+
 [
   {
     "label": "Dashboard",
     "href": "dashboard",
     "description": "go to dashboard",
-    "iner": [
+    "inner": [
       {
         "label": "Device Manager",
         "href": "manager/device",
@@ -23,12 +21,7 @@
     "label": "Device Manager",
     "href": "manager/device",
     "description": "go to device manager",
-    "iner": [
-      {
-        "label": "Device Manager",
-        "href": "manager/device",
-        "description": "go to device manager"
-      },
+    "inner": [
       {
         "label": "Content Manager",
         "href": "manager/content",
