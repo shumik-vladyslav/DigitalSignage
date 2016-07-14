@@ -12,7 +12,9 @@
        // 'dragula': 'node_modules/dragula/dist/dragula.js',
        // 'ng2-dragula': 'node_modules/ng2-dragula',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-        'rxjs':                       'node_modules/rxjs'
+        'rxjs':                       'node_modules/rxjs',
+        'ng2-bs-dropdown':         'node_modules/ng2-bs-dropdown',
+
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
@@ -21,6 +23,7 @@
         'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
         'ng2-material':         { main: 'index.js', defaultExtension: 'js' },
         //'ng2-dragula':{ main: 'ng2-dragula.js', defaultExtension: 'js' }
+        'ng2-bs-dropdown':{ main: 'dropdown.js', defaultExtension: 'js' }
     };
     var ngPackageNames = [
         'common',

@@ -12,7 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mdl_1 = require('../directives/mdl');
+var ng2_bs_dropdown_1 = require('ng2-bs-dropdown');
 var Navigation = (function () {
     function Navigation() {
         this.navItem = [
@@ -89,9 +89,9 @@ var Navigation = (function () {
     Navigation = __decorate([
         core_1.Component({
             selector: 'navigation',
-            template: "<div>NAVIGATION</div>\n<md-button>Flat button</md-button>\n<button md-button=\"\" class=\"md-button\">Button</button>\n<button class=\"mdl-button mdl-js-button\"> Flat button </button>\n<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\">\n  Raised button with ripple\n</button>\n<button class=\"mdl-button mdl-js-button mdl-button--fab\">\n  <i class=\"material-icons\">add</i>\n</button>\n<button class=\"mdl-button mdl-js-button\" disabled>Disabled</button>\n <md-menu-bar>\n        <md-menu>\n          <md-button type=\"button\" class=\"md-icon-button\" ng-click=\"$mdOpenMenu()\" aria-label=\"Share\">\n              <md-icon md-svg-icon=\"share\"></md-icon>\n          </md-button>\n          <md-menu-content width=\"4\">\n              <md-menu-item >\n                <a >SDfsdf</a>\n              </md-menu-item>\n              <md-menu-item>\n                <a >SDfsdf</a>\n              </md-menu-item>\n              <md-menu-item >\n                <a >SDfsdf</a>\n              </md-menu-item>\n              <md-menu-item>\n                <a >SDfsdf</a>\n              </md-menu-item>\n          </md-menu-content>\n     </md-menu>\n        </md-menu-bar>\n        \n        <!-- Left aligned menu below button -->\n<button id=\"demo-menu-lower-left\"\n        class=\"mdl-button mdl-js-button mdl-button--icon\">\n  <i class=\"material-icons\">more_vert</i>\n</button>\n\n<ul class=\"mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect\"\n    for=\"demo-menu-lower-left\">\n  <li class=\"mdl-menu__item\">Some Action</li>\n  <li class=\"mdl-menu__item mdl-menu__item--full-bleed-divider\">Another Action</li>\n  <li disabled class=\"mdl-menu__item\">Disabled Action</li>\n  <li class=\"mdl-menu__item\">Yet Another Action</li>\n</ul>\n                ",
-            styles: [],
-            directives: [mdl_1.MDL]
+            template: "<div>NAVIGATION</div>\n<button>dfdf</button>\n<div class=\"dropdown\">\n  <button class=\"btn btn-primary dropdown-toggle vertical-letter\" type=\"button\" id=\"dropdownMenu1\">\n    n\n    a\n    v\n    g\n  </button>\n  <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu1\">\n    <a class=\"dropdown-item\" href=\"#\">Action</a><br>\n    <a class=\"dropdown-item\" href=\"#\">Another action</a><br>\n    <a class=\"dropdown-item\" href=\"#\">Something else here</a><br>\n  </div>\n</div>\n<div class=\"dropdown\">\n  <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">\n  <span class=\"caret\"></span></button>\n  <ul class=\"dropdown-menu\">\n    <li><a href=\"#\">HTML</a></li>\n    <li><a href=\"#\">CSS</a></li>\n    <li><a href=\"#\">JavaScript</a></li>\n  </ul>\n</div>\n \n                ",
+            styles: ["\n    .vertical-letter {\n    white-space: pre;\n    }\n    "],
+            directives: [ng2_bs_dropdown_1.DROPDOWN_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [])
     ], Navigation);

@@ -4,7 +4,7 @@
 
 import {Component, Input} from '@angular/core';
 import {MdButton} from '@angular2-material/button'
-import { MDL } from '../directives/mdl';
+import {DROPDOWN_DIRECTIVES} from 'ng2-bs-dropdown';
 
 interface INav {
     label: string,
@@ -16,54 +16,37 @@ interface INav {
 @Component({
     selector: 'navigation',
     template:  `<div>NAVIGATION</div>
-<md-button>Flat button</md-button>
-<button md-button="" class="md-button">Button</button>
-<button class="mdl-button mdl-js-button"> Flat button </button>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-  Raised button with ripple
-</button>
-<button class="mdl-button mdl-js-button mdl-button--fab">
-  <i class="material-icons">add</i>
-</button>
-<button class="mdl-button mdl-js-button" disabled>Disabled</button>
- <md-menu-bar>
-        <md-menu>
-          <md-button type="button" class="md-icon-button" ng-click="$mdOpenMenu()" aria-label="Share">
-              <md-icon md-svg-icon="share"></md-icon>
-          </md-button>
-          <md-menu-content width="4">
-              <md-menu-item >
-                <a >SDfsdf</a>
-              </md-menu-item>
-              <md-menu-item>
-                <a >SDfsdf</a>
-              </md-menu-item>
-              <md-menu-item >
-                <a >SDfsdf</a>
-              </md-menu-item>
-              <md-menu-item>
-                <a >SDfsdf</a>
-              </md-menu-item>
-          </md-menu-content>
-     </md-menu>
-        </md-menu-bar>
-        
-        <!-- Left aligned menu below button -->
-<button id="demo-menu-lower-left"
-        class="mdl-button mdl-js-button mdl-button--icon">
-  <i class="material-icons">more_vert</i>
-</button>
-
-<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-    for="demo-menu-lower-left">
-  <li class="mdl-menu__item">Some Action</li>
-  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
-  <li disabled class="mdl-menu__item">Disabled Action</li>
-  <li class="mdl-menu__item">Yet Another Action</li>
-</ul>
+<button>dfdf</button>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle vertical-letter" type="button" id="dropdownMenu1">
+    n
+    a
+    v
+    g
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <a class="dropdown-item" href="#">Action</a><br>
+    <a class="dropdown-item" href="#">Another action</a><br>
+    <a class="dropdown-item" href="#">Something else here</a><br>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div>
+ 
                 `,
-    styles: [],
-    directives: [MDL]
+    styles: [`
+    .vertical-letter {
+    white-space: pre;
+    }
+    `],
+    directives: [DROPDOWN_DIRECTIVES]
 })
 
 export class Navigation {
