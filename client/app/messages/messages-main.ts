@@ -10,13 +10,15 @@ import { Navigation } from "../navigation/navigation";
 
 @Component({
     selector: 'div',
-    template: `<div class ="panel panel-default">
-                <navigation></navigation>
+    template: `<div class="wrap-panel">
+               <navigation></navigation>
+               <div class ="panel panel-default">
                <div class="panel-heading">
                <message-tools (added)="onMessageAdded($event)" (deleted)="onMessageDeleted()" (saved)="saveMessages()"></message-tools>
                </div>
                <div class="panel-body">
                <message-list [messages]="messages"></message-list>
+               </div>
                </div>
                </div>`,
     styleUrls: ['app/messages/messages-main.css'],

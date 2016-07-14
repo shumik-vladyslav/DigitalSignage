@@ -21,7 +21,6 @@ export class NavigationService {
 
     private parse(res: Response) {
         let body: INav [] = res.json();
-        console.log(body)
 
         return body || { };
     }

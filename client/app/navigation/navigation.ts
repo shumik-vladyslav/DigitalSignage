@@ -17,14 +17,14 @@ export interface INav {
     selector: 'navigation',
     template:  `
         <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            <button class="btn btn-primary dropdown-toggle dropdown-button" type="button" data-toggle="dropdown">
              N<br>a<br>v<br>i<br>g<br>a<br>t<br>i<br>o<br>
             </button>
-            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+            <ul class="dropdown-menu multi-level dropdown-menu-first-level" role="menu" aria-labelledby="dropdownMenu">
               <li *ngFor="let item of navItem" [ngClass]="{'dropdown-submenu':item.inner}">
                 <a *ngIf="!item.inner" href="{{ item.href }}" title="{{ item.description }}">{{ item.label }}</a>
                 <a *ngIf="item.inner" tabindex="-1" href="#" title="{{ item.description }}">{{ item.label }}</a>
-                <ul *ngIf="item.inner" class="dropdown-menu">
+                <ul *ngIf="item.inner" class="dropdown-menu dropdown-menu-nested">
                   <li *ngFor="let inner of item.inner">
                     <a href="{{ inner.href }}" title="{{ inner.description }}">{{ inner.label }}</a>
                   </li>
@@ -34,19 +34,25 @@ export interface INav {
         </div>
                 `,
     styles: [`
-        .dropdown-menu {
+        .dropdown-menu-first-level {
             top: 0;
         }
         
-        .dropdown-submenu {
-            position: relative;
+        li{
+            margin: 10px;
+        }
+        
+        .dropdown-button {
+            height: 400px;
+        }
+        
+        .dropdown-menu-nested {
+            height: 100%;
         }
         
         .dropdown-submenu>.dropdown-menu {
             top: 0;
-            left: 100%;
-            margin-top: -6px;
-            margin-left: -1px;
+            left: 93%;
             -webkit-border-radius: 0 6px 6px 6px;
             -moz-border-radius: 0 6px 6px;
             border-radius: 0 6px 6px 6px;
@@ -97,6 +103,10 @@ export class Navigation {
     constructor ( private service: NavigationService ) {
     };
 
+    ngOnInit () {
+        this.getData();
+    }
+
     getData() {
         this.service.getData()
             .subscribe(
@@ -104,4 +114,5 @@ export class Navigation {
                 error =>  this.errorMessage = <any>error);{
         }
     }
+
 }

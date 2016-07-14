@@ -57,6 +57,18 @@
   {
     "label": "Support",
     "href": "support",
-    "description": "go to support"
+    "description": "go to support",
+    "inner": [
+      {
+        "label": "Device Manager",
+        "href": "manager/device",
+        "description": "go to device manager"
+      },
+      {
+        "label": "Content Manager",
+        "href": "manager/content",
+        "description": "go to content manager"
+      }
+    ]
   }
 ]

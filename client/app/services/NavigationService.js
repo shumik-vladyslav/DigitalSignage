@@ -27,7 +27,6 @@ var NavigationService = (function () {
     };
     NavigationService.prototype.parse = function (res) {
         var body = res.json();
-        console.log(body);
         return body || {};
     };
     NavigationService.prototype.handleError = function (error) {
