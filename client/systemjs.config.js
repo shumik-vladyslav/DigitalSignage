@@ -38,7 +38,7 @@
         'core',
         'checkbox',
         'input',
-        'list'
+        'list',
     ];
 
 

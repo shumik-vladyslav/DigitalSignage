@@ -3,6 +3,7 @@
  */
 
 import {Component, Input} from '@angular/core';
+import {MdButton} from '@angular2-material/button'
 
 interface INav {
     label: string,
@@ -15,6 +16,7 @@ interface INav {
     selector: 'navigation',
     template:  `<div>NAVIGATION</div>
 <md-button>Flat button</md-button>
+<button md-button="" class="md-button">Button</button>
  <md-menu-bar>
         <md-menu>
           <md-button type="button" class="md-icon-button" ng-click="$mdOpenMenu()" aria-label="Share">
@@ -36,11 +38,27 @@ interface INav {
           </md-menu-content>
      </md-menu>
         </md-menu-bar>
+        
+        <!-- Left aligned menu below button -->
+<button id="demo-menu-lower-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left">
+  <li class="mdl-menu__item">Some Action</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+  <li disabled class="mdl-menu__item">Disabled Action</li>
+  <li class="mdl-menu__item">Yet Another Action</li>
+</ul>
                 `,
-    styles: []
+    styles: [],
+    directives: [MdButton]
 })
 
 export class Navigation {
+
     @Input () navItem: INav[] =
         [
             {
