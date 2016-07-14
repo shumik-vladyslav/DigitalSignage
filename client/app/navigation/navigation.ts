@@ -21,6 +21,9 @@ export interface INav {
              N<br>a<br>v<br>i<br>g<br>a<br>t<br>i<br>o<br>
             </button>
             <ul class="dropdown-menu multi-level dropdown-menu-first-level" role="menu" aria-labelledby="dropdownMenu">
+              <li>
+                <span>Navigation</span>
+              </li>
               <li *ngFor="let item of navItem" [ngClass]="{'dropdown-submenu':item.inner}">
                 <a *ngIf="!item.inner" href="{{ item.href }}" title="{{ item.description }}">{{ item.label }}</a>
                 <a *ngIf="item.inner" tabindex="-1" href="#" title="{{ item.description }}">{{ item.label }}</a>
@@ -40,6 +43,11 @@ export interface INav {
         
         li{
             margin: 10px;
+        }
+        
+        li span{
+            margin: 50px; 
+            font-size: 12px;
         }
         
         .dropdown-button {
@@ -79,10 +87,7 @@ export interface INav {
         .dropdown-submenu:hover>a:after {
             border-left-color: #fff;
         }
-        
-        .dropdown-submenu.pull-left {
-            float: none;
-        }
+       
         
         .dropdown-submenu.pull-left>.dropdown-menu {
             left: -100%;
