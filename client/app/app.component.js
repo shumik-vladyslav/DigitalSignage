@@ -21,7 +21,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1 class=\"title\">Dashboard23</h1>\n    <nav>\n      <a [routerLink]=\"['/dashboard/messages']\" class=\"btn\"><span class=\"fa fa-messages\"></span> Messages Marquee</a>\n      <a [routerLink]=\"['/dashboard/table']\" class=\"btn\"><span class=\"fa fa-calculator\"></span> Table</a>\n      <a [routerLink]=\"['/dashboard/assets']\" class=\"btn\"><span class=\"fa fa-picture-o\"></span> Assets</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
+            template: "\n    <h1 class=\"title\">Dashboard</h1>\n    <nav>\n      <a [routerLink]=\"['/dashboard/messages']\" class=\"btn\"><span class=\"fa fa-messages\"></span> Messages Marquee</a>\n      <a [routerLink]=\"['/dashboard/table']\" class=\"btn\"><span class=\"fa fa-calculator\"></span> Table</a>\n      <a [routerLink]=\"['/dashboard/assets']\" class=\"btn\"><span class=\"fa fa-picture-o\"></span> Assets</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
             directives: [router_1.ROUTER_DIRECTIVES],
         }), 
         __metadata('design:paramtypes', [])
@@ -33,6 +33,7 @@ exports.AppRoutes = [
     { path: '', redirectTo: '/dashboard/messages', terminal: true },
     { path: 'dashboard/assets', component: assets_main_1.AssetsMain },
     { path: 'dashboard/messages', component: messages_main_1.MessagesMain, useAsDefault: true },
+    // { path: 'dashboard/assets1', component: AssetsComponent },
     { path: 'dashboard/table', component: MyTable_1.TableComponent },
     { path: 'dashboard/agents', component: AgentsManager_1.AgentsManager }
 ];

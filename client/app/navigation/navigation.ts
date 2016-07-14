@@ -14,6 +14,28 @@ interface INav {
 @Component({
     selector: 'navigation',
     template:  `<div>NAVIGATION</div>
+<md-button>Flat button</md-button>
+ <md-menu-bar>
+        <md-menu>
+          <md-button type="button" class="md-icon-button" ng-click="$mdOpenMenu()" aria-label="Share">
+              <md-icon md-svg-icon="share"></md-icon>
+          </md-button>
+          <md-menu-content width="4">
+              <md-menu-item >
+                <a >SDfsdf</a>
+              </md-menu-item>
+              <md-menu-item>
+                <a >SDfsdf</a>
+              </md-menu-item>
+              <md-menu-item >
+                <a >SDfsdf</a>
+              </md-menu-item>
+              <md-menu-item>
+                <a >SDfsdf</a>
+              </md-menu-item>
+          </md-menu-content>
+     </md-menu>
+        </md-menu-bar>
                 `,
     styles: []
 })

@@ -1,16 +1,16 @@
 /// <reference path="../../typings/express/express.d.ts" />
 
 import * as express from 'express';
+const fs = require('fs');
 const router = express.Router();
 
+var url='/nav-item.json';
+console.log(__dirname+url)
 
 router.get('/nav', function (req, res) {
-    var url='/nav-item.json';
-    this.fs.readFile(__dirname+this.url, 'utf8',(err, data)=>{
+    fs.readFile(__dirname+url, 'utf8',(err, data)=>{
         if (err) throw err;
-        this.navs = JSON.parse(data);
-        res.json( this.navs );
-
+        res.json( JSON.parse(data) );
     })
 });
 

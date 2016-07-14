@@ -12,7 +12,7 @@ import {AgentsManager} from "./agents/AgentsManager";
 @Component({
     selector: 'my-app',
     template: `
-    <h1 class="title">Dashboard23</h1>
+    <h1 class="title">Dashboard</h1>
     <nav>
       <a [routerLink]="['/dashboard/messages']" class="btn"><span class="fa fa-messages"></span> Messages Marquee</a>
       <a [routerLink]="['/dashboard/table']" class="btn"><span class="fa fa-calculator"></span> Table</a>

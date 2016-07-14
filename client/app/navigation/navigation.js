@@ -1,3 +1,6 @@
+/**
+ * Created by SHumiC on 13.07.2016.
+ */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -85,7 +88,7 @@ var Navigation = (function () {
     Navigation = __decorate([
         core_1.Component({
             selector: 'navigation',
-            template: "<div>NAVIGATION</div>\n                ",
+            template: "<div>NAVIGATION</div>\n<md-button>Flat button</md-button>\n <md-menu-bar>\n        <md-menu>\n          <md-button type=\"button\" class=\"md-icon-button\" ng-click=\"$mdOpenMenu()\" aria-label=\"Share\">\n              <md-icon md-svg-icon=\"share\"></md-icon>\n          </md-button>\n          <md-menu-content width=\"4\">\n              <md-menu-item >\n                <a >SDfsdf</a>\n              </md-menu-item>\n              <md-menu-item>\n                <a >SDfsdf</a>\n              </md-menu-item>\n              <md-menu-item >\n                <a >SDfsdf</a>\n              </md-menu-item>\n              <md-menu-item>\n                <a >SDfsdf</a>\n              </md-menu-item>\n          </md-menu-content>\n     </md-menu>\n        </md-menu-bar>\n                ",
             styles: []
         }), 
         __metadata('design:paramtypes', [])
